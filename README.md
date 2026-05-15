@@ -140,6 +140,8 @@ python -m unittest discover -s tests
 - Workflow: `publish.yml`
 - Environment: `pypi`
 
+若 GitHub Actions 顯示 `invalid-publisher`，代表 PyPI 端沒有符合 `repo:doggy8088/opencc-py:environment:pypi` claims 的 pending publisher。請確認設定在 `opencc-py-tw2` 這個 PyPI project name 下，而不是 `opencc-py`。
+
 ## License
 
 MIT
