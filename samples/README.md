@@ -28,7 +28,7 @@ python3 samples/cli_usage.py
 ## Run one example with uv
 
 ```bash
-uv run --with-requirements samples/requirements.txt python samples/article_cn_to_tw2.py
+uv run --with opencc-py-tw2 python samples/article_cn_to_tw2.py
 ```
 
 `cli_usage.py` demonstrates the installed `opencc-py` command and creates temporary input/output files automatically.
