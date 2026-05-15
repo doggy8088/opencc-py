@@ -132,15 +132,7 @@ python -m unittest discover -s tests
 
 ## 發布
 
-此專案預期使用 GitHub Actions + PyPI Trusted Publishing 發布。建立 GitHub Release 或執行 publish workflow 前，請先在 PyPI 專案設定 Trusted Publisher：
-
-- Owner: `doggy8088`
-- Repository: `opencc-py`
-- PyPI project name: `opencc-py-tw2`
-- Workflow: `publish.yml`
-- Environment: `pypi`
-
-若 GitHub Actions 顯示 `invalid-publisher`，代表 PyPI 端沒有符合 `repo:doggy8088/opencc-py:environment:pypi` claims 的 pending publisher。請確認設定在 `opencc-py-tw2` 這個 PyPI project name 下，而不是 `opencc-py`。
+PyPI 發布流程請見 [PUBLISHING.md](PUBLISHING.md)。
 
 ## License
 
