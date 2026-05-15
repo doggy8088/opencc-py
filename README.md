@@ -4,16 +4,16 @@
 [![PyPI](https://img.shields.io/pypi/v/opencc-py-tw2.svg)](https://pypi.org/project/opencc-py-tw2/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-`opencc-py` 是依照 [Will 保哥的 C# OpenCC 實作](https://github.com/doggy8088/OpenCC)移植的純 Python OpenCC 函式庫。核心行為保留原實作的內嵌詞庫、locale preset、Trie 最長匹配與多階段轉換流程。
+`opencc-py` 是依照 [Will 保哥的 C# OpenCC 實作](https://github.com/doggy8088/OpenCC)移植的純 Python OpenCC 函式庫。核心行為保留原實作的內嵌詞庫、locale/preset、Trie 最長匹配與多階段轉換流程。
 
 ## 功能
 
-- 純 Python 3.11+，無 runtime dependencies。
+- 純 Python 3.11+，無執行階段相依套件。
 - 內建 `cn`、`hk`、`tw`、`tw2`、`twp`、`jp` locale。
 - 支援 `full`、`cn2t`、`t2cn` preset。
 - 支援自訂字典與多個字典群組串接。
 - Unicode code point 層級的 Trie 最長匹配。
-- XML-compatible HTML 轉換與還原。
+- XML 相容 HTML 轉換與還原。
 - 提供 `opencc-py` CLI。
 
 ## 安裝
@@ -44,7 +44,7 @@ print(convert.convert("默认用户界面支持数据库和网络请求。"))
 | `tw2` | 台灣繁體常用詞 |
 | `twp` | 台灣繁體含 IT、姓名與其他詞彙 |
 | `jp` | 日本新字體/異體字 |
-| `t` | passthrough，不載入該階段字典 |
+| `t` | 直接通過，不載入該階段字典 |
 
 方向限定 preset：
 
@@ -84,9 +84,9 @@ convert = converter_factory(first, second)
 print(convert("a"))  # c
 ```
 
-## XML-compatible HTML 轉換
+## XML 相容 HTML 轉換
 
-此功能使用 Python 標準庫 `xml.etree.ElementTree`，適用於可被 XML parser 解析的 HTML/XML。它會轉換符合 `lang` 範圍內的文字、`meta[name=description|keywords]` 的 `content`、`img alt`、`input[type=button] value`，並略過 `script`、`style` 與 `ignore-opencc` class。
+此功能使用 Python 標準函式庫 `xml.etree.ElementTree`，適用於可被 XML parser 解析的 HTML/XML。它會轉換符合 `lang` 範圍內的文字、`meta[name=description|keywords]` 的 `content`、`img alt`、`input[type=button] value`，並略過 `script`、`style` 與 `ignore-opencc` class。
 
 ```python
 from opencc_py import HtmlConverter, converter
@@ -113,7 +113,7 @@ opencc-py input.txt cn tw2 --in-place
 
 `-o/--output` 與 `-i/--in-place` 不能同時使用。輸入與輸出皆使用 UTF-8。
 
-## Samples
+## 範例
 
 更多可執行範例請見 [`samples/`](samples/)。
 
@@ -127,7 +127,7 @@ python -m pip install build
 python -m build
 ```
 
-如果 C# OpenCC source 與本專案位於同一個父目錄，可重新產生內嵌詞庫：
+如果 C# OpenCC 原始碼與本專案位於同一個父目錄，可重新產生內嵌詞庫：
 
 ```bash
 python tools/generate_dict_data.py
@@ -138,6 +138,6 @@ python -m unittest discover -s tests
 
 PyPI 發布流程請見 [PUBLISHING.md](PUBLISHING.md)。
 
-## License
+## 授權
 
 MIT

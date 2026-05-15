@@ -1,6 +1,6 @@
-# Changelog
+# 變更記錄
 
 ## 0.1.0
 
-- Initial pure Python OpenCC port based on the local C# implementation.
-- Published as `opencc-py-tw2` because `opencc-py` is already used on PyPI.
+- 初始版本，依照本機 C# 實作移植為純 Python OpenCC。
+- 因為 `opencc-py` 已在 PyPI 被使用，所以本專案以 `opencc-py-tw2` 名稱發布。
