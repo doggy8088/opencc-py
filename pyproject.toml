@@ -3,7 +3,7 @@ requires = ["hatchling>=1.26"]
 build-backend = "hatchling.build"
 
 [project]
-name = "opencc-py"
+name = "opencc-py-tw2"
 version = "0.1.0"
 description = "Pure Python port of Will 保哥's C# OpenCC implementation."
 readme = "README.md"

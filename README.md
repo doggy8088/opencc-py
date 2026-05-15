@@ -1,7 +1,7 @@
 # opencc-py
 
 [![CI](https://github.com/doggy8088/opencc-py/actions/workflows/ci.yml/badge.svg)](https://github.com/doggy8088/opencc-py/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/opencc-py.svg)](https://pypi.org/project/opencc-py/)
+[![PyPI](https://img.shields.io/pypi/v/opencc-py-tw2.svg)](https://pypi.org/project/opencc-py-tw2/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 `opencc-py` 是依照 [Will 保哥的 C# OpenCC 實作](https://github.com/doggy8088/OpenCC)移植的純 Python OpenCC 函式庫。核心行為保留原實作的內嵌詞庫、locale preset、Trie 最長匹配與多階段轉換流程。
@@ -19,7 +19,7 @@
 ## 安裝
 
 ```bash
-pip install opencc-py
+pip install opencc-py-tw2
 ```
 
 ## 基本用法
@@ -136,6 +136,7 @@ python -m unittest discover -s tests
 
 - Owner: `doggy8088`
 - Repository: `opencc-py`
+- PyPI project name: `opencc-py-tw2`
 - Workflow: `publish.yml`
 - Environment: `pypi`
 
