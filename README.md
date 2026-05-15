@@ -113,6 +113,10 @@ opencc-py input.txt cn tw2 --in-place
 
 `-o/--output` 與 `-i/--in-place` 不能同時使用。輸入與輸出皆使用 UTF-8。
 
+## Samples
+
+更多可執行範例請見 [`samples/`](samples/)。
+
 ## 開發
 
 ```bash
