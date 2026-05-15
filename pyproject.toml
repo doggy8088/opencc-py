@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "opencc-py"
+version = "0.1.0"
+description = "Pure Python port of Will 保哥's C# OpenCC implementation."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "Will 保哥" }
+]
+keywords = [
+  "opencc",
+  "chinese",
+  "conversion",
+  "traditional",
+  "simplified",
+  "internationalization"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: Chinese (Simplified)",
+  "Natural Language :: Chinese (Traditional)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Text Processing :: Linguistic"
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/doggy8088/opencc-py"
+Repository = "https://github.com/doggy8088/opencc-py.git"
+Issues = "https://github.com/doggy8088/opencc-py/issues"
+
+[project.scripts]
+opencc-py = "opencc_py.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/opencc_py"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/src",
+  "/tests",
+  "/tools",
+  "/README.md",
+  "/LICENSE",
+  "/CHANGELOG.md",
+  "/pyproject.toml"
+]
