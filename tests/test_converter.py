@@ -87,6 +87,33 @@ class ConverterTests(unittest.TestCase):
             with self.subTest(source=source):
                 self.assertEqual(conv.convert(source), expected)
 
+    def test_builtin_converter_preserves_cn_to_tw2_generic_item_terms(self):
+        conv = converter("cn", "tw2")
+        cases = [
+            ("项目", "項目"),
+            ("項目", "項目"),
+            ("清单项目", "清單項目"),
+            ("每个项目", "每個項目"),
+        ]
+
+        for source, expected in cases:
+            with self.subTest(source=source):
+                self.assertEqual(conv.convert(source), expected)
+
+    def test_builtin_converter_converts_cn_to_tw2_project_context_compounds(self):
+        conv = converter("cn", "tw2")
+        cases = [
+            ("项目文件夹", "專案資料夾"),
+            ("项目的", "專案的"),
+            ("项目目录", "專案目錄"),
+            ("项目管理", "專案管理"),
+            ("项目设置", "專案設定"),
+        ]
+
+        for source, expected in cases:
+            with self.subTest(source=source):
+                self.assertEqual(conv.convert(source), expected)
+
     def test_builtin_converter_converts_sentence_and_edge_cases(self):
         conv = converter("cn", "tw2")
         cases = [
@@ -138,6 +165,21 @@ class ConverterTests(unittest.TestCase):
             ("檔案描述子和函式呼叫", "文件描述符和函数调用"),
             ("算繪管線和記憶體配置", "渲染管线和内存分配"),
             ("網路堆疊和網路介面卡", "网络栈和网络适配器"),
+        ]
+
+        for source, expected in cases:
+            with self.subTest(source=source):
+                self.assertEqual(conv.convert(source), expected)
+
+    def test_builtin_converter_preserves_standalone_project_and_converts_compounds_to_cn(self):
+        conv = converter("tw2", "cn")
+        cases = [
+            ("專案", "专案"),
+            ("專案設定", "项目设置"),
+            ("專案目錄", "项目目录"),
+            ("專案管理", "项目管理"),
+            ("專案資料夾", "项目文件夹"),
+            ("專案的", "项目的"),
         ]
 
         for source, expected in cases:
