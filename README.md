@@ -6,6 +6,10 @@
 
 `opencc-py` 是依照 [Will 保哥的 C# OpenCC 實作](https://github.com/doggy8088/OpenCC)移植的純 Python OpenCC 函式庫。核心行為保留原實作的內嵌詞庫、locale/preset、Trie 最長匹配與多階段轉換流程。
 
+## 範例
+
+請參考 [`examples/`](examples/)，內含基本轉換、不套用詞彙轉換、不同簡繁詞庫差異、自訂詞典與 HTML/XML 轉換範例。
+
 ## 功能
 
 - 純 Python 3.11+，無執行階段相依套件。
