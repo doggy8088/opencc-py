@@ -2,6 +2,7 @@
 # Do not edit by hand.
 
 HK_VARIANTS = """\
+
 僞 偽
 兌 兑
 叄 叁
@@ -62,14 +63,15 @@ HK_VARIANTS = """\
 鍼 針
 閱 閲
 鰮 鰛
+
 """
 HK_VARIANTS_REV = """\
+
 偽 僞
 兑 兌
 卧 臥
 叁 叄
 台 臺
-吃 喫
 唇 脣
 啟 啓
 囱 囪
@@ -125,8 +127,10 @@ HK_VARIANTS_REV = """\
 鋭 銳
 閲 閱
 鰛 鰮
+
 """
 HK_VARIANTS_REV_PHRASES = """\
+
 一口吃個 一口喫個
 一口吃成 一口喫成
 一家三口 一家三口
@@ -150,7 +154,6 @@ HK_VARIANTS_REV_PHRASES = """\
 吃口 喫口
 吃口令 吃口令
 吃口飯 喫口飯
-吃吃 喫喫
 吃子 喫子
 名胄 名胄
 國胄 國胄
@@ -283,16 +286,20 @@ HK_VARIANTS_REV_PHRASES = """\
 龍巖市 龍巖市
 龍巖村 龍巖村
 龍胄 龍胄
+
 """
 JP_SHINJITAI_CHARACTERS = """\
+
 両 兩
 弁 辨
 欠 缺
 糸 絲
 芸 藝
 浜 濱
+
 """
 JP_SHINJITAI_PHRASES = """\
+
 一獲千金 一攫千金
 丁寧 叮嚀
 丁重 鄭重
@@ -469,8 +476,10 @@ JP_SHINJITAI_PHRASES = """\
 骨格 骨骼
 高進 亢進
 鳥観 鳥瞰
+
 """
 JP_VARIANTS = """\
+
 乘 乗
 亂 乱
 亙 亘
@@ -838,8 +847,10 @@ JP_VARIANTS = """\
 齡 齢
 龍 竜
 龜 亀
+
 """
 JP_VARIANTS_REV = """\
+
 万 萬
 与 與
 両 兩
@@ -1197,8 +1208,10 @@ JP_VARIANTS_REV = """\
 黙 默
 鼈 鱉
 齢 齡
+
 """
 ST_CHARACTERS = """\
+
 㐷 傌
 㐹 㑶
 㐽 偑
@@ -1548,7 +1561,6 @@ ST_CHARACTERS = """\
 叹 嘆
 叽 嘰
 吁 籲
-吃 喫
 后 後
 吓 嚇
 吕 呂
@@ -5082,8 +5094,10 @@ ST_CHARACTERS = """\
 𰾄 鋂
 𰾭 鑀
 𱊜 𪈼
+
 """
 ST_PHRASES = """\
+
 㓦划 㓦劃
 一丝不挂 一絲不掛
 一了心愿 一了心願
@@ -54133,8 +54147,10 @@ ST_PHRASES = """\
 龚胜 龔勝
 龟卜 龜卜
 龟鉴 龜鑑
+
 """
 TS_CHARACTERS = """\
+
 㑮 𫝈
 㑯 㑔
 㑳 㑇
@@ -58240,8 +58256,10 @@ TS_CHARACTERS = """\
 𪷓 𣶭
 𫒡 𫓷
 𫜦 𫜫
+
 """
 TS_PHRASES = """\
+
 一目瞭然 一目了然
 上鍊 上链
 不瞭解 不了解
@@ -58518,8 +58536,10 @@ TS_PHRASES = """\
 麼些族 麽些族
 黄鍾公 黄锺公
 龍鍾 龙钟
+
 """
 TW_PHRASES_CUSTOM = """\
+
 一觸即髮	一觸即發
 千鈞一髮	千鈞一髮
 蓄勢待髮	蓄勢待發
@@ -58924,8 +58944,10 @@ while 循環	while 迴圈
 單反相機	單眼相機
 剃鬚刀	刮鬍刀
 屏幕	螢幕
+
 """
 TW_PHRASES_CUSTOM_REV = """\
+
 一觸即發	一觸即髮
 千鈞一髮	千鈞一髮
 蓄勢待發	蓄勢待髮
@@ -59330,8 +59352,10 @@ LLM	法學碩士
 單眼相機	單反相機
 刮鬍刀	剃鬚刀
 螢幕	屏幕
+
 """
 TW_PHRASES_IT = """\
+
 PN結 PN接面
 SQL注入 SQL隱碼攻擊
 SQL注入攻擊 SQL隱碼攻擊
@@ -59718,8 +59742,10 @@ U盤 隨身碟
 默認值 預設值
 點擊 點選
 鼠標 滑鼠
+
 """
 TW_PHRASES_NAME = """\
+
 乍得 查德
 也門 葉門
 仙童半導體 快捷半導體
@@ -59804,8 +59830,10 @@ TW_PHRASES_NAME = """\
 香農 夏農
 馬爾代夫 馬爾地夫
 馬里共和國 馬利共和國
+
 """
 TW_PHRASES_OTHER = """\
+
 元音 母音
 冰棍 冰棒
 出租車 計程車
@@ -59843,8 +59871,10 @@ TW_PHRASES_OTHER = """\
 鑥 鎦
 黃宏 黃宏
 借記卡 簽帳金融卡
+
 """
 TW_PHRASES_REV = """\
+
 PN接面 PN結
 SQL隱碼攻擊 SQL注入
 三極體 三極管
@@ -60361,8 +60391,10 @@ SQL隱碼攻擊 SQL注入
 黃宏 黃宏
 點選 點擊
 點陣圖 位圖
+
 """
 TW_VARIANTS = """\
+
 僞 偽
 啓 啟
 喫 吃
@@ -60402,11 +60434,12 @@ TW_VARIANTS = """\
 鮎 鯰
 麪 麵
 齶 顎
+
 """
 TW_VARIANTS_REV = """\
+
 偽 僞
 參 蔘
-吃 喫
 唇 脣
 啟 啓
 媯 嬀
@@ -60439,8 +60472,10 @@ TW_VARIANTS_REV = """\
 顎 齶
 鯰 鮎
 麵 麪
+
 """
 TW_VARIANTS_REV_PHRASES = """\
+
 一口吃個 一口喫個
 一口吃成 一口喫成
 一家三口 一家三口
@@ -60478,7 +60513,6 @@ TW_VARIANTS_REV_PHRASES = """\
 吃口 喫口
 吃口令 吃口令
 吃口飯 喫口飯
-吃吃 喫喫
 吃子 喫子
 合著 合著
 吉凶 吉凶
@@ -60509,27 +60543,28 @@ TW_VARIANTS_REV_PHRASES = """\
 開口 開口
 閔凶 閔凶
 顯著 顯著
+
 """
 
 DICT_METADATA = {
-    'HK_VARIANTS': {'entries': 60, 'sha256': 'ff9a6016474b6f965ea91a0206a60798eac112f3b223bda81bc690a4c184483a'},
-    'HK_VARIANTS_REV': {'entries': 61, 'sha256': 'b1531ce1af25b229018c7270a268c8a3dedbd11db9b22b207fca8ae8959401d0'},
-    'HK_VARIANTS_REV_PHRASES': {'entries': 156, 'sha256': '00cbac30973e43277958fb6af40c30c6ded1ea15310bca7d5f9513fc86bceaad'},
-    'JP_SHINJITAI_CHARACTERS': {'entries': 6, 'sha256': '24e6b971b5d87ca9b3bb3b7ae00bcc9876eaf36780a8656038997fd4f3b7c6c4'},
-    'JP_SHINJITAI_PHRASES': {'entries': 176, 'sha256': '27ba191dff36dd8a28a168db3a8cf393035f2074b77ac35c1c4c80a7e47a6946'},
-    'JP_VARIANTS': {'entries': 367, 'sha256': 'b786887f9b598e19fa80cf73bc2225c514a8539523978f873df8d45d0baaa0b3'},
-    'JP_VARIANTS_REV': {'entries': 357, 'sha256': 'e039ec5e3d183d0cd867c652f08668667c435ef68ff747d24e9e8397b1db739a'},
-    'ST_CHARACTERS': {'entries': 3883, 'sha256': '996d4f9fd47705d0e95906a2b89c33d54ee0dff27f652c58657b9653a319fc41'},
-    'ST_PHRASES': {'entries': 49049, 'sha256': '767eb6c413b9cf16459e19a42a59000da34bf6ceada422da282941b50cdd9a96'},
-    'TS_CHARACTERS': {'entries': 4105, 'sha256': 'c1f5eb3bacb48fd659d9da683e9ca8d8a5abcaf1fcdd5fa84dca82fe62b3b302'},
-    'TS_PHRASES': {'entries': 276, 'sha256': '0f1438ed742791d96bf39d5c40a136704a609a9de53f0331b8f3a583f04a0309'},
-    'TW_PHRASES_CUSTOM': {'entries': 404, 'sha256': '45d4a9bfa9cee6fa990b2c45a12a10cd970f852a468ee72cfcc2f8a0f99d8a28'},
-    'TW_PHRASES_CUSTOM_REV': {'entries': 404, 'sha256': 'e2317601956c8590298a115c20d12128d5e8a3c0b6eb5e62589ba3734c0a4932'},
-    'TW_PHRASES_IT': {'entries': 386, 'sha256': '6b57d968438b4db87edd30f19451344859be67fdfb8488339807b495a1a781aa'},
-    'TW_PHRASES_NAME': {'entries': 84, 'sha256': '72547e526d0187a9ed772c4efd41fce1c6867bd6ec91b5a777ac94acb9dd2cea'},
-    'TW_PHRASES_OTHER': {'entries': 37, 'sha256': '091d10fb07155e9858d92fd7a45c01bd0365b8cdb4cd6b513da72320ec486e4d'},
-    'TW_PHRASES_REV': {'entries': 516, 'sha256': '0428e805fdca80307d2cbd2dced41010ada75dd921e679e5021ca6de8de59586'},
-    'TW_VARIANTS': {'entries': 39, 'sha256': '2405b3595ec50696ecb8a53c0be876ee6f57dbb2b7a2300c7baeb73659306472'},
-    'TW_VARIANTS_REV': {'entries': 35, 'sha256': 'f7497c9c05de582b80aa7c9d9324c5a8778823effd87fe59e17143a8cfc73e11'},
-    'TW_VARIANTS_REV_PHRASES': {'entries': 68, 'sha256': 'e896cf6cfc4ed48e6224909c28aa3b1187b623ccfb11bf74f688569271c3084d'},
+    'HK_VARIANTS': {'entries': 1, 'sha256': 'dfb628939f1daa539287202fe18c4b93715797562ebe385c489997be0eac5082'},
+    'HK_VARIANTS_REV': {'entries': 1, 'sha256': '014664a4925eed2b5ade0cf88b91b7c7aea804886eaa9700a00d7cd739b2c4fb'},
+    'HK_VARIANTS_REV_PHRASES': {'entries': 1, 'sha256': '8d9eb589ec9a4918f3d3c42c3d5142b4d9af5b41f12004e98f550316bf3354a2'},
+    'JP_SHINJITAI_CHARACTERS': {'entries': 1, 'sha256': '0c5840e857f9b809e8df0d829b9c2bd78d955c4a5d65ab56db49bd3e938df90f'},
+    'JP_SHINJITAI_PHRASES': {'entries': 1, 'sha256': '6398b83a37f5c35a0c0528c6f8f157871506bd84210b5b2a997282d1973b50b8'},
+    'JP_VARIANTS': {'entries': 1, 'sha256': 'fa6b64965df85361368119370314e7ce152776f7a15e40389d68d4854600fffa'},
+    'JP_VARIANTS_REV': {'entries': 1, 'sha256': 'f5704ee62adce37190374eeb274de892a0e08e992460b78427a247e34ef50bb7'},
+    'ST_CHARACTERS': {'entries': 1, 'sha256': 'd90598afd63cc50c7252c316d84ae683d1f28c096a8a9de9d176d764902a14ae'},
+    'ST_PHRASES': {'entries': 1, 'sha256': '030e7bcd849c022d4f8c59c188545dbc3cf77b8c91653aa31a27b2f038ced8cc'},
+    'TS_CHARACTERS': {'entries': 1, 'sha256': 'ae6949281c857a2d7ec233f9ef7d4cfc4f707ff2b9512fb41e80ea37ef1e03ba'},
+    'TS_PHRASES': {'entries': 1, 'sha256': '26c1773b82d2a8bcf679897c61d8eca4855f7e900ab07369b3c72264d626be51'},
+    'TW_PHRASES_CUSTOM': {'entries': 1, 'sha256': '3e8a38559a6e339f461f84db8675094cbbdb89d3535f75758c64a30bd34ac9fa'},
+    'TW_PHRASES_CUSTOM_REV': {'entries': 1, 'sha256': 'e367807ecb94a3911486f03904c0bf2dcf56ba033ade33dae5ed6cea11ef79d7'},
+    'TW_PHRASES_IT': {'entries': 1, 'sha256': 'bf06a72435abc9b03873369854e9bcea21228446f484ef51e7166c07a3121c03'},
+    'TW_PHRASES_NAME': {'entries': 1, 'sha256': 'e9f014bdcc96ef2e1e5816c506f16e470f9c9a20121820a706855b973523d86e'},
+    'TW_PHRASES_OTHER': {'entries': 1, 'sha256': 'fc7ca85aa5e056379e1164c5665d0eb9df48bfb95871d27555ae001ce4ec8c53'},
+    'TW_PHRASES_REV': {'entries': 1, 'sha256': 'b43385ad57d77e3a378e551e6e2e7e35296d6fd6f59681ede1802ce5151b18d9'},
+    'TW_VARIANTS': {'entries': 1, 'sha256': '62f848ec1072426b354e8a118bca4b5d428d54f1f0431e94f9f850a8fe75d1ac'},
+    'TW_VARIANTS_REV': {'entries': 1, 'sha256': '7ba3844d147e345a7d06c10a19bb5325948c52cc9d342e908c58f6394a368fd9'},
+    'TW_VARIANTS_REV_PHRASES': {'entries': 1, 'sha256': 'e18e56e8cc5476a8da8ebb496410e5a2a6edc0fb8d63e80c4487e9af49f26706'},
 }

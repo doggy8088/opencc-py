@@ -51,8 +51,8 @@ def main() -> int:
 
 
 def parse_constants(source: str) -> dict[str, str]:
-    pattern = re.compile(r'public const string (?P<name>\w+) = @"(?P<value>.*?)";', re.DOTALL)
-    return {match.group("name"): match.group("value").replace('""', '"') for match in pattern.finditer(source)}
+    pattern = re.compile(r'public const string (?P<name>\w+) = """(?P<value>.*?)""";', re.DOTALL)
+    return {match.group("name"): match.group("value") for match in pattern.finditer(source)}
 
 
 def render(constants: dict[str, str]) -> str:
