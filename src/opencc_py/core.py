@@ -114,7 +114,8 @@ class Trie:
         if dict_data is None:
             raise TypeError("dict_data cannot be None")
 
-        for line in dict_data.split("|"):
+        for line in dict_data.replace("|", "\n").split("\n"):
+            line = line.strip()
             if not line:
                 continue
             separator_index = line.find("\t")

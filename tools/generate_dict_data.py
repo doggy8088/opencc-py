@@ -65,14 +65,18 @@ def render(constants: dict[str, str]) -> str:
     for name in sorted(constants):
         py_name = to_upper_snake(name)
         value = constants[name]
-        lines.append(f"{py_name} = {value!r}")
+        entries = [e for e in value.split("|") if e]
+        multiline = "\n".join(entries) + "\n"
+        lines.append(f'{py_name} = """\\\n{multiline}"""')
     lines.append("")
     lines.append("DICT_METADATA = {")
     for name in sorted(constants):
         py_name = to_upper_snake(name)
         value = constants[name]
-        entry_count = len([line for line in value.split("|") if line])
-        digest = hashlib.sha256(value.encode("utf-8")).hexdigest()
+        entries = [e for e in value.split("|") if e]
+        multiline = "\n".join(entries) + "\n"
+        entry_count = len(entries)
+        digest = hashlib.sha256(multiline.encode("utf-8")).hexdigest()
         lines.append(f"    {py_name!r}: {{'entries': {entry_count}, 'sha256': {digest!r}}},")
     lines.append("}")
     lines.append("")
