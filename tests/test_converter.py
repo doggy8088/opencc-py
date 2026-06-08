@@ -186,6 +186,38 @@ class ConverterTests(unittest.TestCase):
             with self.subTest(source=source):
                 self.assertEqual(conv.convert(source), expected)
 
+    def test_builtin_converter_rewrites_ping_tai_to_ping_tai_in_tw2(self):
+        """tw2 should consistently prefer 平台 over 平臺 for all platform-related terms."""
+        conv = converter("cn", "tw2")
+        cases = [
+            # bare 平台 (simplified) should stay 平台 (not become 平臺)
+            ("平台", "平台"),
+            # common compound terms
+            ("跨平台", "跨平台"),
+            ("软件平台", "軟體平台"),
+            ("作业平台", "作業平台"),
+            # library-compound terms still expand 庫→函式庫
+            ("Web 平台库", "Web 平台函式庫"),
+            ("全平台库列表", "全平台函式庫列表"),
+            ("原生平台库", "原生平台函式庫"),
+        ]
+
+        for source, expected in cases:
+            with self.subTest(source=source):
+                self.assertEqual(conv.convert(source), expected)
+
+    def test_builtin_converter_rewrites_tw2_ping_tai_back_to_ping_tai_in_cn(self):
+        """tw2→cn reverse: 平台 in tw2 context maps back to 平台 in cn."""
+        conv = converter("tw2", "cn")
+        cases = [
+            ("跨平台", "跨平台"),
+            ("軟體平台", "软件平台"),
+        ]
+
+        for source, expected in cases:
+            with self.subTest(source=source):
+                self.assertEqual(conv.convert(source), expected)
+
     @staticmethod
     def _preset():
         return LocalePreset(

@@ -58944,6 +58944,7 @@ while 循環	while 迴圈
 單反相機	單眼相機
 剃鬚刀	刮鬍刀
 屏幕	螢幕
+平臺	平台
 
 """
 TW_PHRASES_CUSTOM_REV = """\
@@ -59352,6 +59353,7 @@ LLM	法學碩士
 單眼相機	單反相機
 刮鬍刀	剃鬚刀
 螢幕	屏幕
+平台	平臺
 
 """
 TW_PHRASES_IT = """\
@@ -60558,8 +60560,8 @@ DICT_METADATA = {
     'ST_PHRASES': {'entries': 1, 'sha256': '030e7bcd849c022d4f8c59c188545dbc3cf77b8c91653aa31a27b2f038ced8cc'},
     'TS_CHARACTERS': {'entries': 1, 'sha256': 'ae6949281c857a2d7ec233f9ef7d4cfc4f707ff2b9512fb41e80ea37ef1e03ba'},
     'TS_PHRASES': {'entries': 1, 'sha256': '26c1773b82d2a8bcf679897c61d8eca4855f7e900ab07369b3c72264d626be51'},
-    'TW_PHRASES_CUSTOM': {'entries': 1, 'sha256': '3e8a38559a6e339f461f84db8675094cbbdb89d3535f75758c64a30bd34ac9fa'},
-    'TW_PHRASES_CUSTOM_REV': {'entries': 1, 'sha256': 'e367807ecb94a3911486f03904c0bf2dcf56ba033ade33dae5ed6cea11ef79d7'},
+    'TW_PHRASES_CUSTOM': {'entries': 1, 'sha256': '898ab724f3e4f1bfa670e12b9fd48e5649feae132a15defefd9aafbb72911583'},
+    'TW_PHRASES_CUSTOM_REV': {'entries': 1, 'sha256': '51f274017d819ffa576f0bcb87d9434caa261a3cd55b89943ab23f348f78d64a'},
     'TW_PHRASES_IT': {'entries': 1, 'sha256': 'bf06a72435abc9b03873369854e9bcea21228446f484ef51e7166c07a3121c03'},
     'TW_PHRASES_NAME': {'entries': 1, 'sha256': 'e9f014bdcc96ef2e1e5816c506f16e470f9c9a20121820a706855b973523d86e'},
     'TW_PHRASES_OTHER': {'entries': 1, 'sha256': 'fc7ca85aa5e056379e1164c5665d0eb9df48bfb95871d27555ae001ce4ec8c53'},
