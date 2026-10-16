@@ -100,27 +100,22 @@ repo:doggy8088/opencc-py:environment:pypi
 - Workflow name 是 `publish.yml`，不是 `.github/workflows/publish.yml`。
 - Environment name 環境名稱是 `pypi`。
 
-## 4. 建立 GitHub Release
+## 4. 發布（push 到 main 自動執行）
 
-確認 CI 通過後，用 GitHub CLI 建立 release：
+`publish.yml` 在 push 到 `main` 時會檢查 `pyproject.toml` 的版本：
 
-```bash
-gh release create v0.1.0 \
-  --repo doggy8088/opencc-py \
-  --target main \
-  --title "v0.1.0" \
-  --notes "初始版本，依照 C# 實作移植為純 Python OpenCC。"
-```
+- 還沒有 `v<版本>` tag：執行測試 → 建置 → 發布到 PyPI → 建立 tag 與 GitHub Release。
+- 已經有 tag：略過，不會重複發布。
 
-也可以在 GitHub 網頁操作：
+所以發版只要：
 
-1. 開啟 `https://github.com/doggy8088/opencc-py/releases/new`。
-2. 建立 tag，例如 `v0.1.0`。
-3. Target 目標選 `main`。
-4. 填寫 release 標題與說明。
-5. 按 **Publish release**。
+1. 更新 `pyproject.toml` 的 `version`，例如 `0.1.2`。
+2. 在 `CHANGELOG.md` 新增 `## 0.1.2` 段落。GitHub Release 的說明會直接取用這個段落；沒有這個段落時，改列出上一個 tag 之後的 commit。
+3. commit 並 push 到 `main`。
 
-發布 release 後，GitHub Actions 會自動執行 `publish.yml`。
+用 `GITHUB_TOKEN` 建立的 Release 不會再觸發 `release` 事件，所以不會發布兩次。
+
+也可以照舊手動建立 GitHub Release（`gh release create v0.1.2 --target main ...` 或 GitHub 網頁），`publish.yml` 會在 Release 發布時執行並上傳到 PyPI。PyPI 發布步驟設定了 `skip-existing`，同一個版本重複觸發也不會失敗。
 
 ## 5. 監看發布 workflow
 
@@ -185,11 +180,7 @@ git tag -d v0.1.0 2>/dev/null || true
 
 代表同一個版本已經上傳到 PyPI。PyPI 不允許覆蓋既有版本。
 
-處理方式：
-
-1. 更新 `pyproject.toml` 版本，例如 `0.1.1`。
-2. 提交並推送。
-3. 建立新的 GitHub Release tag，例如 `v0.1.1`。
+`publish.yml` 已設定 `skip-existing`，同一個版本重複觸發時會略過上傳，不會失敗。要發布新內容，請更新 `pyproject.toml` 版本，例如 `0.1.2`，再 commit 並 push 到 `main`。
 
 ### 找不到 `opencc-py-tw2`
 
@@ -208,6 +199,6 @@ python -m pip install --no-cache-dir opencc-py-tw2==0.1.0
 - [ ] `twine check dist/*` 成功。
 - [ ] GitHub CI 通過。
 - [ ] PyPI Trusted Publisher 設定為 `opencc-py-tw2`。
-- [ ] GitHub Release tag 與版本一致。
-- [ ] `publish.yml` 成功。
+- [ ] `CHANGELOG.md` 有對應版本的段落。
+- [ ] push 到 `main` 後 `publish.yml` 成功，並自動建立 tag 與 GitHub Release。
 - [ ] 能從 PyPI 安裝並通過 smoke test。
