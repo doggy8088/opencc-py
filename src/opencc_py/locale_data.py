@@ -52,6 +52,7 @@ def from_tw2() -> DictGroup:
         dict_data.TW_VARIANTS_REV,
         dict_data.TW_PHRASES_CUSTOM_REV,
         TW_PHRASES_CUSTOM_ADDITIONS_REV,
+        dict_data.TW_2_TAI_REV,
     )
 
 
@@ -88,6 +89,7 @@ def to_tw2() -> DictGroup:
         dict_data.TW_VARIANTS,
         dict_data.TW_PHRASES_CUSTOM,
         TW_PHRASES_CUSTOM_ADDITIONS,
+        dict_data.TW_2_TAI,
     )
 
 

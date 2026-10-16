@@ -20,6 +20,8 @@ class DictDataTests(unittest.TestCase):
             "ST_PHRASES",
             "TS_CHARACTERS",
             "TS_PHRASES",
+            "TW_2_TAI",
+            "TW_2_TAI_REV",
             "TW_PHRASES_CUSTOM",
             "TW_PHRASES_CUSTOM_REV",
             "TW_PHRASES_IT",

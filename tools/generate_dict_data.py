@@ -18,6 +18,8 @@ EXPECTED_NAMES = {
     "STPhrases",
     "TSCharacters",
     "TSPhrases",
+    "TW2Tai",
+    "TW2TaiRev",
     "TWPhrasesCustom",
     "TWPhrasesCustomRev",
     "TWPhrasesIT",

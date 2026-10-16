@@ -1,5 +1,6 @@
 import unittest
 
+from opencc_py import dict_data
 from opencc_py import (
     ConverterOptions,
     Dict,
@@ -217,6 +218,70 @@ class ConverterTests(unittest.TestCase):
         for source, expected in cases:
             with self.subTest(source=source):
                 self.assertEqual(conv.convert(source), expected)
+
+    def test_builtin_converter_uses_tai_except_official_names_in_tw2(self):
+        """tw2 uses 台 in everyday words and keeps 臺 in official names."""
+        conv = converter("cn", "tw2")
+        cases = [
+            # 日常用語用「台」
+            ("台北", "台北"),
+            ("台湾", "台灣"),
+            ("台中", "台中"),
+            ("台阶", "台階"),
+            ("电视台", "電視台"),
+            ("舞台", "舞台"),
+            ("后台", "後台"),
+            ("台积电", "台積電"),
+            # 「颱」「檯」不受影響
+            ("台风", "颱風"),
+            ("柜台", "櫃檯"),
+            ("吧台", "吧檯"),
+            ("台灯", "檯燈"),
+            # 正式名稱保留「臺」
+            ("国立台湾大学", "國立臺灣大學"),
+            ("台北市政府", "臺北市政府"),
+            ("新台币", "新臺幣"),
+            ("台湾银行", "臺灣銀行"),
+            ("台湾台北地方法院", "臺灣臺北地方法院"),
+            ("我在台北市政府上班", "我在臺北市政府上班"),
+        ]
+
+        for source, expected in cases:
+            with self.subTest(source=source):
+                self.assertEqual(conv.convert(source), expected)
+
+    def test_builtin_converter_normalizes_tai_in_tw2_official_names(self):
+        cases = [
+            ("tw", "tw2", "臺北", "台北"),
+            ("tw", "tw2", "國立臺灣大學", "國立臺灣大學"),
+            # 寫成「台」的正式名稱統一成「臺」
+            ("tw2", "tw2", "台北市政府", "臺北市政府"),
+            ("tw2", "tw2", "新台幣", "新臺幣"),
+            ("tw2", "tw2", "台灣臺北地方法院", "臺灣臺北地方法院"),
+            ("tw2", "cn", "國立臺灣大學", "国立台湾大学"),
+            ("tw2", "cn", "台北", "台北"),
+        ]
+
+        for source_locale, target_locale, source, expected in cases:
+            with self.subTest(source=source, source_locale=source_locale, target_locale=target_locale):
+                self.assertEqual(converter(source_locale, target_locale).convert(source), expected)
+
+    def test_builtin_converter_keeps_every_tw2_tai_proper_noun_in_context(self):
+        proper_nouns = sorted(
+            {line.split("\t")[1] for line in dict_data.TW_2_TAI.splitlines() if line.strip()} - {"台"}
+        )
+        cn_to_tw2 = converter("cn", "tw2")
+        tw2_to_cn = converter("tw2", "cn")
+        tw_to_tw2 = converter("tw", "tw2")
+        tw2_to_tw2 = converter("tw2", "tw2")
+
+        self.assertTrue(proper_nouns)
+        for noun in proper_nouns:
+            text = f"在{noun}前"
+            with self.subTest(noun=noun):
+                self.assertEqual(cn_to_tw2.convert(tw2_to_cn.convert(text)), text)
+                self.assertEqual(tw_to_tw2.convert(text), text)
+                self.assertEqual(tw2_to_tw2.convert(text), text)
 
     @staticmethod
     def _preset():
