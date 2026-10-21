@@ -147,3 +147,7 @@ PyPI 發布流程請見 [PUBLISHING.md](PUBLISHING.md)。
 ## 授權
 
 MIT
+
+## 台灣詞彙品質改善
+
+`tw2` / `twp` 的共用詞彙規則、語境限制、測試結果與效能對照，請見 [台灣詞彙品質說明](https://github.com/doggy8088/opencc-rust/blob/main/quality/README.md)。

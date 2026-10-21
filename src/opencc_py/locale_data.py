@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from . import dict_data
+from . import dict_data, taiwan_quality
 from .core import DictGroup, LocalePreset
 
 TW_PHRASES_CUSTOM_ADDITIONS = """
@@ -90,6 +90,7 @@ def to_tw2() -> DictGroup:
         dict_data.TW_PHRASES_CUSTOM,
         TW_PHRASES_CUSTOM_ADDITIONS,
         dict_data.TW_2_TAI,
+        taiwan_quality.TW2,
     )
 
 
@@ -99,6 +100,7 @@ def to_twp() -> DictGroup:
         dict_data.TW_PHRASES_IT,
         dict_data.TW_PHRASES_NAME,
         dict_data.TW_PHRASES_OTHER,
+        taiwan_quality.TWP,
     )
 
 
