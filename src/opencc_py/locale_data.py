@@ -36,7 +36,7 @@ TW_PHRASES_CUSTOM_ADDITIONS_REV = """
 
 
 def from_cn() -> DictGroup:
-    return DictGroup.from_strings(dict_data.ST_CHARACTERS, dict_data.ST_PHRASES)
+    return DictGroup.from_strings(dict_data.ST_CHARACTERS, dict_data.ST_PHRASES, taiwan_quality.CN)
 
 
 def from_hk() -> DictGroup:
