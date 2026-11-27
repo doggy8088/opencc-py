@@ -59281,7 +59281,6 @@ while 迴圈	while 循環
 一些函式庫	一些庫
 一個函式庫	一個庫
 一個類別	一個類
-一個類別	一個類別
 交易	事務
 交易式	事務性
 程式碼	代碼
@@ -59292,7 +59291,6 @@ while 迴圈	while 循環
 程式碼庫	代碼庫
 程式碼重構	代碼重構
 任意類別	任意類
-任意類別	任意類別
 延展性	伸縮性
 相依套件	依賴包
 相依性注入	依賴注入
@@ -59342,7 +59340,6 @@ callback	回調
 多執行緒	多線程
 執行緒	線程
 子類別	子類
-子類別	子類別
 欄位	字段
 字元	字符
 字串	字符串
@@ -59364,7 +59361,6 @@ callback	回調
 導覽	導航
 導覽列	導航條
 就是類別	就是類
-就是類別	就是類別
 區域變數	局部變量
 螢幕	屏幕
 遮罩	屏蔽
@@ -59395,11 +59391,9 @@ callback	回調
 批次處理	批處理
 技術堆疊	技術棧
 抽象類別	抽象類
-抽象類別	抽象類別
 指標	指針
 介面	接口
 介面和抽象類別	接口和抽象類
-介面和抽象類別	介面和抽象類別
 控制項	控件
 主控台	控制檯
 輸出到 Console	控制檯打印
@@ -60878,7 +60872,7 @@ DICT_METADATA = {
     'TW_2_TAI': {'entries': 1, 'sha256': 'dcd7c60d518842138b97b60e9ff3c7003b116f100e633f3e23710384e2adb942'},
     'TW_2_TAI_REV': {'entries': 1, 'sha256': 'c9b2768437bd2b63999bad3fb704052d50e955ef19e846c0d25d93fe6ad60976'},
     'TW_PHRASES_CUSTOM': {'entries': 1, 'sha256': '4c83438899e7b7f780f86d5bac284c5138eeb0465d039a8051c511699d602dd8'},
-    'TW_PHRASES_CUSTOM_REV': {'entries': 1, 'sha256': '41d9cf1bcf1349352a504b197f469988bca52348511b1bc85024edf2e44a5ad4'},
+    'TW_PHRASES_CUSTOM_REV': {'entries': 1, 'sha256': 'b83e2e01ef8a6b017ad6159d411e0989d495f61dbfbb42f06dac1dd0cccf1113'},
     'TW_PHRASES_IT': {'entries': 1, 'sha256': 'bf06a72435abc9b03873369854e9bcea21228446f484ef51e7166c07a3121c03'},
     'TW_PHRASES_NAME': {'entries': 1, 'sha256': 'e9f014bdcc96ef2e1e5816c506f16e470f9c9a20121820a706855b973523d86e'},
     'TW_PHRASES_OTHER': {'entries': 1, 'sha256': 'fc7ca85aa5e056379e1164c5665d0eb9df48bfb95871d27555ae001ce4ec8c53'},
