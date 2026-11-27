@@ -1,0 +1,5 @@
+#!/bin/sh
+# 本機 pre-commit hook（啟用方式見 repo 文件的「本機與 CI 驗證分工」）。
+set -e
+echo "[pre-commit] unittest"
+PYTHONPATH=src python3 -m unittest discover -s tests
